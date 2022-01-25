@@ -11,7 +11,7 @@ import callToApi from '../services/callToApi';
 
 function App() {
 
-  const [house, setHouse] = useState('slytherin');
+  const [house, setHouse] = useState('gryffindor');
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
     <div>
       <h1>Harry Potter Characters Database</h1>
       <Form />
-      <CharacterList />
+      <CharacterList characters={characters} />
     </div>
   );
 }

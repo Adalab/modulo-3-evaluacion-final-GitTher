@@ -1,10 +1,21 @@
 import CharacterCard from "./CharacterCard"
 
-const CharacterList = () => {
+const CharacterList = (props) => {
+    const characterData = props.characters.map((character) => {
+        return (
+            <li>
+                <CharacterCard character={character} />
+            </li>
+        )
+    })
     return (
-        <>
-            <CharacterCard />
-        </>
+        <section>
+            <ul>
+                <li>
+                    {characterData}
+                </li>
+            </ul>
+        </section>
     )
 }
 
