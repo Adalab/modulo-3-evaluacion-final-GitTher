@@ -1,3 +1,5 @@
+import { v4 as uuid } from 'uuid';
+
 const callToApi = (house) => {
     return fetch(`http://hp-api.herokuapp.com/api/characters/house/${house}`)
         .then((response) => response.json())
@@ -11,6 +13,7 @@ const callToApi = (house) => {
                     house: character.house,
                     alive: character.alive,
                     image: character.image,
+                    id: uuid(),
                 };
             });
             return charactersData;
