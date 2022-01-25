@@ -1,12 +1,12 @@
 import FormHouse from "./FormHouse"
 import FormName from "./FormName"
 
-const Form = () => {
+const Form = (props) => {
     return (
-        <>
+        <form>
             <FormName />
-            <FormHouse />
-        </>
+            <FormHouse house={props.house} handleFilter={props.handleFilter} />
+        </form>
     )
 }
 

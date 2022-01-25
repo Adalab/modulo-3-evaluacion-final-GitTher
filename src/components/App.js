@@ -12,18 +12,25 @@ import callToApi from '../services/callToApi';
 function App() {
 
   const [house, setHouse] = useState('gryffindor');
+  const [name, setName] = useState('');
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     callToApi(house).then((charactersData) => {
       setCharacters(charactersData);
     })
-  }, []);
+  }, [house]);
+
+  const handleFilter = (form) => {
+    if (form.key === 'house') {
+      setHouse(form.value);
+    }
+  }
 
   return (
     <div>
       <h1>Harry Potter Characters Database</h1>
-      <Form />
+      <Form house={house} handleFilter={handleFilter} />
       <CharacterList characters={characters} />
     </div>
   );
