@@ -1,6 +1,7 @@
 import CharacterCard from "./CharacterCard"
 
 const CharacterList = (props) => {
+
     const characterData = props.characters.map((character) => {
         return (
             <li key={character.id}>
