@@ -34,7 +34,8 @@ function App() {
   const filteredCharacters = characters
     .filter((character) => {
       return character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase());
-    })
+    }
+    )
 
   const renderCharacterDetail = (props) => {
     const routeId = props.match.params.characterId;
@@ -48,7 +49,7 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <Form house={house} name={name} handleFilter={handleFilter} />
-          <CharacterList characters={filteredCharacters} />
+          <CharacterList characters={filteredCharacters} name={name} />
         </Route>
         <Route path="/character/:characterId" render={renderCharacterDetail} />
       </Switch>
