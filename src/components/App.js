@@ -24,14 +24,21 @@ function App() {
   const handleFilter = (form) => {
     if (form.key === 'house') {
       setHouse(form.value);
+    } if (form.key === 'name') {
+      setName(form.value);
     }
   }
+
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase());
+    })
 
   return (
     <div>
       <h1>Harry Potter Characters Database</h1>
-      <Form house={house} handleFilter={handleFilter} />
-      <CharacterList characters={characters} />
+      <Form house={house} name={name} handleFilter={handleFilter} />
+      <CharacterList characters={filteredCharacters} />
     </div>
   );
 }
