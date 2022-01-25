@@ -1,19 +1,18 @@
 import CharacterCard from "./CharacterCard"
+import { v4 as uuid } from 'uuid';
 
 const CharacterList = (props) => {
     const characterData = props.characters.map((character) => {
         return (
-            <li>
+            <li key={uuid()}>
                 <CharacterCard character={character} />
-            </li>
+            </li >
         )
     })
     return (
         <section>
             <ul>
-                <li>
-                    {characterData}
-                </li>
+                {characterData}
             </ul>
         </section>
     )
