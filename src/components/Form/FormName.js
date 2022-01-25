@@ -1,5 +1,6 @@
 const FormName = (props) => {
     const handleName = (event) => {
+        event.preventDefault()
         props.handleFilter({
             key: 'name',
             value: event.currentTarget.value,
