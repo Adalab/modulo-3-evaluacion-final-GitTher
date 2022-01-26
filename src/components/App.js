@@ -9,13 +9,14 @@ import CharacterDetail from './Character/CharacterDetail';
 import NotFound from './NotFound'
 
 import callToApi from '../services/callToApi';
+import ls from '../services/localStorage'
 
 
 
 function App() {
 
-  const [house, setHouse] = useState('gryffindor');
-  const [name, setName] = useState('');
+  const [house, setHouse] = useState(ls.get('house', 'gryffindor'));
+  const [name, setName] = useState(ls.get('name', ''));
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -23,6 +24,13 @@ function App() {
       setCharacters(charactersData);
     })
   }, [house]);
+
+  useEffect(() => {
+    ls.set('house', house);
+  }, [house]);
+  useEffect(() => {
+    ls.set('name', name);
+  }, [name]);
 
   const handleFilter = (form) => {
     if (form.key === 'house') {
