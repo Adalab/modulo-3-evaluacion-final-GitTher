@@ -15,7 +15,7 @@ const CharacterList = (props) => {
     return (
         <section>
             <ul>
-                {props.characters.length > 1 ? characterData : notFound}
+                {props.characters.length >= 1 ? characterData : notFound}
             </ul>
         </section>
     )
