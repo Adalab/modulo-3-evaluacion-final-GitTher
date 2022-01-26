@@ -3,6 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons'
 import { faSkull } from '@fortawesome/free-solid-svg-icons'
 
+import houseGryffindor from '../../images/house_gryffindor.png'
+import houseSlytherin from '../../images/house_slytherin.png'
+import houseHufflepuff from '../../images/house_hufflepuff.png'
+import houseRavenclaw from '../../images/house_ravenclaw.png'
+
 const CharacterDetail = (props) => {
 
     const getGender = () => {
@@ -46,6 +51,26 @@ const CharacterDetail = (props) => {
         }
     }
 
+    const getHouse = () => {
+        if (props.character.house === "Gryffindor") {
+            return (
+                <span>Gryffindor<img src={houseGryffindor} title="gryffindor" alt="gryffindor" /></span>
+            )
+        } else if (props.character.house === "Slytherin") {
+            return (
+                <span>Slytherin<img src={houseSlytherin} title="slytherin" alt="slytherin" /></span>
+            )
+        } else if (props.character.house === "Hufflepuff") {
+            return (
+                <span>Hufflepuff<img src={houseHufflepuff} title="hufflepuff" alt="hufflepuff" /></span>
+            )
+        } else if (props.character.house === "Ravenclaw") {
+            return (
+                <span>Ravenclaw<img src={houseRavenclaw} title="ravenclaw" alt="ravenclaw" /></span>
+            )
+        }
+    }
+
     const renderNotFound = () => {
         return (
             <p>El personaje que buscas no existe</p>
@@ -61,7 +86,7 @@ const CharacterDetail = (props) => {
                 <p>Especie: {getSpecies()}</p>
                 <p>Genero: {getGender()}</p>
                 <p>Ascendencia: {getBlood()}</p>
-                <p>Casa: {props.character.house}</p>
+                <p>Casa: {getHouse()}</p>
             </article>
         )
     }
