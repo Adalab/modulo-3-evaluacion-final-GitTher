@@ -6,7 +6,7 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import Form from "./Form/Form";
 import CharacterList from "./Character/CharacterList";
 import CharacterDetail from './Character/CharacterDetail';
-import NotFound from './Character/NotFound'
+import NotFound from './NotFound'
 
 import callToApi from '../services/callToApi';
 
