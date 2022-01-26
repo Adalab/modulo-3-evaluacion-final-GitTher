@@ -1,0 +1,16 @@
+@import "../../core/variables";
+
+.form {
+  background-color: rgb(161, 161, 161);
+  padding: 32px;
+  &__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__reset {
+  }
+}

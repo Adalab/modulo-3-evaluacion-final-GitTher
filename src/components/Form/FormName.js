@@ -1,3 +1,5 @@
+import '../../styles/components/Form/FormName.scss'
+
 const FormName = (props) => {
     const handleName = (event) => {
         props.handleFilter({
@@ -8,8 +10,9 @@ const FormName = (props) => {
 
     return (
         <>
-            <label htmlFor="name">Nombre
-                <input type="text" value={props.name} id="name" onChange={handleName} />
+            <label
+                className='form__label' htmlFor="name">Nombre:
+                <input className='form__input' type="text" value={props.name} id="name" onChange={handleName} />
             </label>
         </>
     )

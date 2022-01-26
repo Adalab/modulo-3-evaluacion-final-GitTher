@@ -1,3 +1,5 @@
+import '../../styles/components/Form/FormHouse.scss'
+
 const FormHouse = (props) => {
     const handleHouse = (event) => {
         props.handleFilter({
@@ -8,11 +10,11 @@ const FormHouse = (props) => {
 
     return (
         <>
-            <label htmlFor="house">
+            <label className='form__label' htmlFor="house">
                 Casa:
             </label>
 
-            <select name="house" id="house" onChange={handleHouse} value={props.house}>
+            <select className='form__select' name="house" id="house" onChange={handleHouse} value={props.house}>
                 <option value="gryffindor">gryffindor</option>
                 <option value="slytherin">slytherin</option>
                 <option value="hufflepuff">hufflepuff</option>

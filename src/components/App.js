@@ -3,6 +3,7 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import '../styles/App.scss';
 // import PropTypes from 'prop-types';
 
+import Header from './Header';
 import Form from "./Form/Form";
 import CharacterList from "./Character/CharacterList";
 import CharacterDetail from './Character/CharacterDetail';
@@ -10,6 +11,7 @@ import NotFound from './NotFound'
 
 import callToApi from '../services/callToApi';
 import ls from '../services/localStorage'
+
 
 
 
@@ -73,7 +75,7 @@ function App() {
 
   return (
     <div>
-      <h1>Harry Potter Characters Database</h1>
+      <Header />
       <Switch>
         <Route exact path="/">
           <Form house={house} name={name} blood={blood} handleFilter={handleFilter} />

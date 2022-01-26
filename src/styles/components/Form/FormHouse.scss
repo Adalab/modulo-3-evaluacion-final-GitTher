@@ -1,0 +1,17 @@
+@import "../../core/variables";
+
+.form {
+  &__label {
+    // font-family: $fontText;
+    // font-weight: 400;
+    font-size: 16px;
+    // color: $colorGrey;
+    line-height: 16px;
+    display: block;
+  }
+  &__select {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
