@@ -30,9 +30,14 @@ const CharacterDetail = (props) => {
         }
     }
 
-    return (
-        <>
-            <Link to="/">Volver</Link>
+    const renderNotFound = () => {
+        return (
+            <p>El personaje que buscas no existe</p>
+        );
+    };
+
+    const renderDetail = () => {
+        return (
             <article>
                 <img src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/210x295/ffffff/666666/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
                 <h3>{props.character.name}</h3>
@@ -41,6 +46,13 @@ const CharacterDetail = (props) => {
                 <p>Genero: {getGender()}</p>
                 <p>Casa: {props.character.house}</p>
             </article>
+        )
+    }
+
+    return (
+        <>
+            <Link to="/">Volver</Link>
+            {props.character === undefined ? renderNotFound() : renderDetail()}
         </>
     )
 }

@@ -42,10 +42,9 @@ function App() {
   const getRouteCharacter = () => {
     if (routeCharacterData !== null) {
       const routeCharacterId = routeCharacterData.params.characterId;
-      const routeCharacter = characters.find(character => {
+      return characters.find(character => {
         return character.id === routeCharacterId;
       });
-      return routeCharacter || {};
     }
   }
 
