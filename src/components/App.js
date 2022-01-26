@@ -17,7 +17,7 @@ import ls from '../services/localStorage'
 
 function App() {
 
-  const [house, setHouse] = useState(ls.get('house', 'gryffindor'));
+  const [house, setHouse] = useState(ls.get('house', 'Gryffindor'));
   const [name, setName] = useState(ls.get('name', ''));
   const [blood, setBlood] = useState(ls.get('blood', ''))
   const [characters, setCharacters] = useState([]);
@@ -63,12 +63,18 @@ function App() {
     return 0;
   });
 
-  const routeCharacterData = useRouteMatch('/character/:characterId');
+  const routeCharacterData = useRouteMatch('/character/:characterHouse/:characterId');
   const getRouteCharacter = () => {
     if (routeCharacterData !== null) {
+      const routeCharacterHouse = routeCharacterData.params.characterHouse;
+      if (routeCharacterHouse !== house) {
+        setHouse(routeCharacterHouse);
+      } else { }
       const routeCharacterId = routeCharacterData.params.characterId;
+
+
       return characters.find(character => {
-        return character.id === routeCharacterId;
+        return character.id === routeCharacterId && character.house === routeCharacterHouse;
       });
     }
   }

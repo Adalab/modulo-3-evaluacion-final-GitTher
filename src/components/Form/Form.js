@@ -11,7 +11,7 @@ const Form = (props) => {
     const handleReset = (event) => {
         props.handleFilter({
             key: 'house',
-            value: 'gryffindor',
+            value: 'Gryffindor',
         })
         props.handleFilter({
             key: 'name',

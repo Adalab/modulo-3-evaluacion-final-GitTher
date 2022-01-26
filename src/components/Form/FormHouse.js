@@ -15,10 +15,10 @@ const FormHouse = (props) => {
             </label>
 
             <select className='form__select' name="house" id="house" onChange={handleHouse} value={props.house}>
-                <option value="gryffindor">gryffindor</option>
-                <option value="slytherin">slytherin</option>
-                <option value="hufflepuff">hufflepuff</option>
-                <option value="ravenclaw">ravenclaw</option>
+                <option value="Gryffindor">Gryffindor</option>
+                <option value="Slytherin">Slytherin</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+                <option value="Ravenclaw">Ravenclaw</option>
             </select>
         </>
     )
