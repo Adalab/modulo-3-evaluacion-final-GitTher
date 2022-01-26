@@ -1,3 +1,5 @@
+import '../../styles/components/Character/CharacterDetail.scss'
+
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeartbeat } from '@fortawesome/free-solid-svg-icons'
@@ -54,19 +56,19 @@ const CharacterDetail = (props) => {
     const getHouse = () => {
         if (props.character.house === "Gryffindor") {
             return (
-                <span>Gryffindor<img src={houseGryffindor} title="gryffindor" alt="gryffindor" /></span>
+                <span>Gryffindor<img className='detail__text--house' src={houseGryffindor} title="gryffindor" alt="gryffindor" /></span>
             )
         } else if (props.character.house === "Slytherin") {
             return (
-                <span>Slytherin<img src={houseSlytherin} title="slytherin" alt="slytherin" /></span>
+                <span>Slytherin<img className='detail__text--house' src={houseSlytherin} title="slytherin" alt="slytherin" /></span>
             )
         } else if (props.character.house === "Hufflepuff") {
             return (
-                <span>Hufflepuff<img src={houseHufflepuff} title="hufflepuff" alt="hufflepuff" /></span>
+                <span>Hufflepuff<img className='detail__text--house' src={houseHufflepuff} title="hufflepuff" alt="hufflepuff" /></span>
             )
         } else if (props.character.house === "Ravenclaw") {
             return (
-                <span>Ravenclaw<img src={houseRavenclaw} title="ravenclaw" alt="ravenclaw" /></span>
+                <span>Ravenclaw<img className='detail__text--house' src={houseRavenclaw} title="ravenclaw" alt="ravenclaw" /></span>
             )
         }
     }
@@ -86,15 +88,15 @@ const CharacterDetail = (props) => {
 
     const renderDetail = () => {
         return (
-            <article>
-                <img src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/210x295/ffffff/666666/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
-                <h3>{props.character.name}</h3>
+            <article className='detail'  >
+                <img className='detail__image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/210x295/ffffff/666666/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
+                <h3 className='detail__title' >{props.character.name}</h3>
                 {getAltNames()}
-                <p>Estatus: {getStatus()}</p>
-                <p>Especie: {getSpecies()}</p>
-                <p>Genero: {getGender()}</p>
-                <p>Ascendencia: {getBlood()}</p>
-                <p>Casa: {getHouse()}</p>
+                <p className='detail__text' >Estatus: {getStatus()}</p>
+                <p className='detail__text' >Especie: {getSpecies()}</p>
+                <p className='detail__text' >Genero: {getGender()}</p>
+                <p className='detail__text' >Ascendencia: {getBlood()}</p>
+                <p className='detail__text' >Casa: {getHouse()}</p>
 
             </article>
         )
