@@ -70,6 +70,13 @@ const CharacterDetail = (props) => {
             )
         }
     }
+    const getAltNames = () => {
+        if (props.character.altnames.length > 0) {
+            return (
+                <p>Otros nombres: {props.character.altnames}</p>
+            )
+        }
+    }
 
     const renderNotFound = () => {
         return (
@@ -82,11 +89,13 @@ const CharacterDetail = (props) => {
             <article>
                 <img src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/210x295/ffffff/666666/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
                 <h3>{props.character.name}</h3>
+                {getAltNames()}
                 <p>Estatus: {getStatus()}</p>
                 <p>Especie: {getSpecies()}</p>
                 <p>Genero: {getGender()}</p>
                 <p>Ascendencia: {getBlood()}</p>
                 <p>Casa: {getHouse()}</p>
+
             </article>
         )
     }
