@@ -17,6 +17,7 @@ function App() {
 
   const [house, setHouse] = useState(ls.get('house', 'gryffindor'));
   const [name, setName] = useState(ls.get('name', ''));
+  const [blood, setBlood] = useState(ls.get('blood', ''))
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -31,12 +32,17 @@ function App() {
   useEffect(() => {
     ls.set('name', name);
   }, [name]);
+  useEffect(() => {
+    ls.set('blood', blood);
+  }, [blood]);
 
   const handleFilter = (form) => {
     if (form.key === 'house') {
       setHouse(form.value);
-    } if (form.key === 'name') {
+    } else if (form.key === 'name') {
       setName(form.value);
+    } else if (form.key === 'blood') {
+      setBlood(form.value);
     }
   }
 
@@ -45,6 +51,9 @@ function App() {
       return character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase());
     }
     )
+    .filter((character) => {
+      return character.blood.includes(blood);
+    })
 
   const routeCharacterData = useRouteMatch('/character/:characterId');
   const getRouteCharacter = () => {
@@ -61,7 +70,7 @@ function App() {
       <h1>Harry Potter Characters Database</h1>
       <Switch>
         <Route exact path="/">
-          <Form house={house} name={name} handleFilter={handleFilter} />
+          <Form house={house} name={name} blood={blood} handleFilter={handleFilter} />
           <CharacterList characters={filteredCharacters} name={name} />
         </Route>
         <Route path="/character/:characterId" ><CharacterDetail character={getRouteCharacter()} /></Route>

@@ -1,3 +1,4 @@
+import FormBlood from "./FormBlood";
 import FormHouse from "./FormHouse"
 import FormName from "./FormName"
 
@@ -10,6 +11,7 @@ const Form = (props) => {
         <form onSubmit={handleSubmit}>
             <FormName name={props.name} handleFilter={props.handleFilter} />
             <FormHouse house={props.house} handleFilter={props.handleFilter} />
+            <FormBlood blood={props.blood} handleFilter={props.handleFilter} />
         </form>
     )
 }

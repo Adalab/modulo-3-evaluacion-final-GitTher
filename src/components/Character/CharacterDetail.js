@@ -44,6 +44,7 @@ const CharacterDetail = (props) => {
                 <p>Estatus:  {props.character.alive === true ? "vivo" : "muerto"}</p>
                 <p>Especie: {getSpecies()}</p>
                 <p>Genero: {getGender()}</p>
+                <p>Ascendencia: {props.character.blood}</p>
                 <p>Casa: {props.character.house}</p>
             </article>
         )

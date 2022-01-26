@@ -12,6 +12,7 @@ const callToApi = (house) => {
                     alive: character.alive,
                     image: character.image,
                     actor: character.actor,
+                    blood: character.ancestry,
                     id: character.name.replace(/\s+/g, '-') + "-by-" + character.actor.replace(/\s+/g, '-') + "-" + index,
                 };
 
