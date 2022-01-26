@@ -10,13 +10,26 @@ const CharacterDetail = (props) => {
         }
     }
 
-    // const getStatus = () => {
-    //     if (props.character.status === true) {
-    //         return "vivo";
-    //     } else if (props.character.status === false) {
-    //         return "fallecido"
-    //     }
-    // }
+    const getStatus = () => {
+        if (props.character.alive === true) {
+            return "vivo";
+        } else {
+            return "fallecido";
+        }
+    }
+
+
+    const getBlood = () => {
+        if (props.character.blood === "half-blood") {
+            return "mestizo";
+        } else if (props.character.blood === "pure-blood") {
+            return "sangre pura";
+        } else if (props.character.blood === "muggleborn") {
+            return "hijo de muggles";
+        } else if (props.character.blood === "") {
+            return "desconocida";
+        }
+    }
 
     const getSpecies = () => {
         if (props.character.species === "human") {
@@ -41,10 +54,10 @@ const CharacterDetail = (props) => {
             <article>
                 <img src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/210x295/ffffff/666666/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
                 <h3>{props.character.name}</h3>
-                <p>Estatus:  {props.character.alive === true ? "vivo" : "muerto"}</p>
+                <p>Estatus: {getStatus()}</p>
                 <p>Especie: {getSpecies()}</p>
                 <p>Genero: {getGender()}</p>
-                <p>Ascendencia: {props.character.blood}</p>
+                <p>Ascendencia: {getBlood()}</p>
                 <p>Casa: {props.character.house}</p>
             </article>
         )
