@@ -6,11 +6,8 @@
   align-items: center;
   justify-content: center;
   height: 150px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0),
-    rgba(0, 0, 0, 0.3)
-  );
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #091d33);
+  background-color: #123863;
 
   &__logo {
     height: 70px;
@@ -19,7 +16,7 @@
   &__title {
     font-family: $fontTitle;
     font-size: 40px;
-    // color: $colorWhite;
+    color: $colorWhite;
     line-height: 48px;
     text-shadow: 0 2px 3px rgba($color: #000000, $alpha: 0.2);
     text-align: center;

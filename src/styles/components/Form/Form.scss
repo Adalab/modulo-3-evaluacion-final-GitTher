@@ -1,18 +1,33 @@
 @import "../../core/variables";
 
 .form {
-  background-color: rgb(161, 161, 161);
+  background-color: $colorBlack;
   padding: 32px;
   &__title {
-    font-size: 40px;
+    font-size: 24px;
+    font-weight: 300;
     margin-bottom: 16px;
-    font-family: $fontTitle;
+    font-family: $fontText;
+    color: $colorWhite;
   }
   &__form {
     display: flex;
     flex-direction: column;
+    padding-left: 32px;
   }
   &__reset {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    background-color: $colorSecondary;
+    border: 2px solid $colorPrimary;
+    border-radius: 8px;
+    color: $colorWhite;
+    font-family: $fontText;
+    line-height: 24px;
     font-size: 16px;
+    padding: 4px 8px;
+    margin-left: 32px;
+    width: 100px;
   }
 }

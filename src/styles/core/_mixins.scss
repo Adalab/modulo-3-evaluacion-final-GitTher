@@ -19,4 +19,20 @@
   font-size: 16px;
   line-height: 16px;
   display: block;
+  color: $colorWhite;
+}
+
+@mixin formInput {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  background-color: $colorPrimary;
+  border: 1px solid $colorBlack;
+  border-radius: 8px;
+  color: $colorWhite;
+  font-family: $fontText;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 4px 8px;
+  width: 200px;
 }

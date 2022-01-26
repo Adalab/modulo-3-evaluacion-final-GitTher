@@ -16,10 +16,10 @@ const FormBlood = (props) => {
             </label>
 
             <select className='form__select' name="blood" id="blood" onChange={handleBlood} value={props.blood}>
-                <option value="">cualquiera</option>
-                <option value="half-blood">mestizo</option>
-                <option value="pure-blood">sangre pura</option>
-                <option value="muggleborn">hijo de muggles</option>
+                <option value="">Cualquiera</option>
+                <option value="half-blood">Mestizo</option>
+                <option value="pure-blood">Sangre pura</option>
+                <option value="muggleborn">Hijo de muggles</option>
             </select>
         </>
     )
