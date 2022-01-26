@@ -2,7 +2,8 @@ const callToApi = (house) => {
     return fetch(`http://hp-api.herokuapp.com/api/characters/house/${house}`)
         .then((response) => response.json())
         .then((data) => {
-            const charactersData = data.map((character) => {
+            console.log(data)
+            const charactersData = data.map((character, index) => {
                 return {
                     name: character.name,
                     altnames: character.alternate_names,
@@ -12,7 +13,7 @@ const callToApi = (house) => {
                     alive: character.alive,
                     image: character.image,
                     actor: character.actor,
-                    id: character.name.replace(/\s+/g, '-') + "-by-" + character.actor.replace(/\s+/g, '-'),
+                    id: character.name.replace(/\s+/g, '-') + "-by-" + character.actor.replace(/\s+/g, '-') + "-" + index,
                 };
 
             });
