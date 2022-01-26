@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeartbeat } from '@fortawesome/free-solid-svg-icons'
+import { faSkull } from '@fortawesome/free-solid-svg-icons'
 
 const CharacterDetail = (props) => {
 
@@ -12,9 +15,9 @@ const CharacterDetail = (props) => {
 
     const getStatus = () => {
         if (props.character.alive === true) {
-            return "vivo";
+            return (<span>Vivo < FontAwesomeIcon icon={faHeartbeat} /></span>);
         } else {
-            return "fallecido";
+            return (<span>Fallecido < FontAwesomeIcon icon={faSkull} /></span>);
         }
     }
 
