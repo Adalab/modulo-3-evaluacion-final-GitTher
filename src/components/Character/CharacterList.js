@@ -1,3 +1,5 @@
+import '../../styles/components/Character/CharacterList.scss'
+
 import CharacterCard from "./CharacterCard"
 
 const CharacterList = (props) => {
@@ -13,7 +15,7 @@ const CharacterList = (props) => {
 
     return (
         <section>
-            <ul>
+            <ul className='list'>
                 {props.characters.length >= 1 ? characterData : notFound}
             </ul>
         </section>

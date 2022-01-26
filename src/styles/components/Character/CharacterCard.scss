@@ -1,0 +1,28 @@
+@import "../../core/variables";
+
+.list {
+  &__link {
+    text-decoration: none;
+  }
+  &__card {
+    background-color: cadetblue;
+    padding: 16px;
+    margin: 8px;
+    &--image {
+      width: 200px;
+      height: 275px;
+    }
+    &--title {
+      width: 200px;
+      font-size: 24px;
+      color: grey;
+      line-height: 32px;
+      text-align: center;
+    }
+    &--text {
+      font-size: 16px;
+      color: black;
+      line-height: 24px;
+    }
+  }
+}
