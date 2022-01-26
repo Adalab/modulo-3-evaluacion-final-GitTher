@@ -75,7 +75,7 @@ const CharacterDetail = (props) => {
     const getAltNames = () => {
         if (props.character.altnames.length > 0) {
             return (
-                <p>Otros nombres: {props.character.altnames}</p>
+                <p className='detail__text'>Otros nombres: {props.character.altnames}</p>
             )
         }
     }

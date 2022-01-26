@@ -1,13 +1,9 @@
 @import "../../core/variables";
+@import "../../core/mixins";
 
 .form {
   &__label {
-    // font-family: $fontText;
-    // font-weight: 400;
-    font-size: 16px;
-    // color: $colorGrey;
-    line-height: 16px;
-    display: block;
+    @include formLabel;
   }
   &__input {
     display: block;

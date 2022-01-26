@@ -1,4 +1,4 @@
-import '../../styles/components/Form/FormHouse.scss'
+import '../../styles/components/Form/FormBlood.scss'
 
 const FormBlood = (props) => {
     const handleBlood = (event) => {

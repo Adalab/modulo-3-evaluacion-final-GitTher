@@ -14,15 +14,18 @@
     }
     &--title {
       width: 200px;
-      font-size: 24px;
-      color: grey;
-      line-height: 32px;
+      font-size: 32px;
+      color: black;
+      line-height: 40px;
       text-align: center;
+      font-family: $fontTitle;
     }
     &--text {
       font-size: 16px;
+      font-weight: 200;
       color: black;
       line-height: 24px;
+      font-family: $fontText;
     }
   }
 }

@@ -26,7 +26,7 @@ const Form = (props) => {
 
     return (
         <section className='form'>
-            <h2 className='form__title'>Filtro de personajes:</h2>
+            <h2 className='form__title'>Filtros:</h2>
             <form className='form__form' onSubmit={handleSubmit}>
                 <FormName name={props.name} handleFilter={props.handleFilter} />
                 <FormHouse house={props.house} handleFilter={props.handleFilter} />
