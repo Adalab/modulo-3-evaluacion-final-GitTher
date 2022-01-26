@@ -1,10 +1,9 @@
 import CharacterCard from "./CharacterCard"
-import { v4 as uuid } from 'uuid';
 
 const CharacterList = (props) => {
     const characterData = props.characters.map((character) => {
         return (
-            <li key={uuid()}>
+            <li key={character.id}>
                 <CharacterCard character={character} />
             </li >
         )

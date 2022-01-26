@@ -47,7 +47,7 @@ function App() {
     <div>
       <h1>Harry Potter Characters Database</h1>
       <Switch>
-        <Route path="/" exact>
+        <Route exact path="/">
           <Form house={house} name={name} handleFilter={handleFilter} />
           <CharacterList characters={filteredCharacters} name={name} />
         </Route>
