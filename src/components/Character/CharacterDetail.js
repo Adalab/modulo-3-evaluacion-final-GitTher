@@ -14,42 +14,56 @@ const CharacterDetail = (props) => {
 
     const getGender = () => {
         if (props.character.gender === "male") {
-            return "masculino";
+            return "Masculino";
         } else if (props.character.gender === "female") {
-            return "femenino"
+            return "Femenino"
         }
     }
 
     const getStatus = () => {
-        if (props.character.alive === true) {
+        if (props.character.alive === true && props.character.gender === "male") {
             return (<span>Vivo < FontAwesomeIcon icon={faHeartbeat} /></span>);
-        } else {
+        } else if (props.character.alive === true && props.character.gender === "female") {
+            return (<span>Viva < FontAwesomeIcon icon={faHeartbeat} /></span>);
+        } else if (props.character.alive === false && props.character.gender === "male") {
             return (<span>Fallecido < FontAwesomeIcon icon={faSkull} /></span>);
+        } else if (props.character.alive === false && props.character.gender === "female") {
+            return (<span>Fallecida < FontAwesomeIcon icon={faSkull} /></span>);
         }
     }
 
 
     const getBlood = () => {
-        if (props.character.blood === "half-blood") {
-            return "mestizo";
+        if (props.character.blood === "half-blood" && props.character.gender === "male") {
+            return "Mestizo";
+        } else if (props.character.blood === "half-blood" && props.character.gender === "female") {
+            return "Mestiza";
         } else if (props.character.blood === "pure-blood") {
-            return "sangre pura";
-        } else if (props.character.blood === "muggleborn") {
-            return "hijo de muggles";
+            return "Sangre pura";
+        } else if (props.character.blood === "muggleborn" && props.character.gender === "male") {
+            return "Hijo de muggles";
+        } else if (props.character.blood === "muggleborn" && props.character.gender === "female") {
+            return "Hija de muggles";
         } else if (props.character.blood === "") {
-            return "desconocida";
+            return "Desconocida";
         }
     }
 
     const getSpecies = () => {
-        if (props.character.species === "human") {
-            return "humano";
+        if (props.character.species === "human" && props.character.gender === "male") {
+            return "Humano";
+        } else if (props.character.species === "human" && props.character.gender === "female") {
+            return "Humana";
         } else if (props.character.species === "ghost") {
-            return "fantasma"
-        } else if (props.character.species === "werewolf") {
-            return "hombre lobo"
-        } else if (props.character.species === "half-giant") {
-            return "medio gigante"
+            return "Fantasma"
+        } else if (props.character.species === "werewolf" && props.character.gender === "male") {
+            return "Hombre lobo"
+        } else if (props.character.species === "werewolf" && props.character.gender === "female") {
+            return "Mujer lobo"
+        } else if (props.character.species === "half-giant" && props.character.gender === "male") {
+            return "Medio gigante"
+        } else if (props.character.species === "half-giant" && props.character.gender === "female") {
+            return "Medio giganta"
         }
     }
 
@@ -111,7 +125,7 @@ const CharacterDetail = (props) => {
 
     return (
         <>
-            <Link className='back' to="/">Volver</Link>
+            <Link className='detail__back' to="/">Volver</Link>
             {props.character === undefined ? renderNotFound() : renderDetail()}
         </>
     )

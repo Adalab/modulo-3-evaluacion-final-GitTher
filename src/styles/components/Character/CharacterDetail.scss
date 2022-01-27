@@ -46,13 +46,21 @@ body {
       height: 64px;
     }
   }
-}
-
-.back {
-  @include button;
-  text-decoration: none;
+  &__back {
+    @include button;
+    text-decoration: none;
+    @include tablet {
+      display: block;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 32px;
+    }
+  }
 }
 
 .alert {
   @include alert;
+  max-width: 300px;
+  display: block;
+  margin: auto;
 }
