@@ -11,6 +11,23 @@
   }
 }
 
+/* --------- common --------- */
+
+@mixin button {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  background-color: $colorSecondary;
+  border: 2px solid $colorPrimary;
+  border-radius: 8px;
+  color: $colorWhite;
+  font-family: $fontText;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 4px 8px;
+  margin: 32px;
+  width: 100px;
+}
+
 /* --------- form --------- */
 
 @mixin formLabel {
@@ -35,4 +52,15 @@
   font-size: 16px;
   padding: 4px 8px;
   width: 200px;
+}
+
+/* --------- character --------- */
+
+@mixin characterTitle {
+  width: 200px;
+  font-size: 32px;
+  color: $colorWhite;
+  line-height: 40px;
+  text-align: center;
+  font-family: $fontTitle;
 }

@@ -1,4 +1,5 @@
 @import "../../core/variables";
+@import "../../core/mixins";
 
 .form {
   background-color: $colorBlack;
@@ -17,17 +18,6 @@
   }
   &__reset {
     display: block;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    background-color: $colorSecondary;
-    border: 2px solid $colorPrimary;
-    border-radius: 8px;
-    color: $colorWhite;
-    font-family: $fontText;
-    line-height: 24px;
-    font-size: 16px;
-    padding: 4px 8px;
-    margin-left: 32px;
-    width: 100px;
+    @include button;
   }
 }
