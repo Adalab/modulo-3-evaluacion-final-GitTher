@@ -56,7 +56,9 @@ const CharacterDetail = (props) => {
     const getHouse = () => {
         if (props.character.house === "Gryffindor") {
             return (
-                <span>Gryffindor<img className='detail__text--house' src={houseGryffindor} title="gryffindor" alt="gryffindor" /></span>
+                // <span>Gryffindor
+                <img className='detail__text--house' src={houseGryffindor} title="gryffindor" alt="gryffindor" />
+                // </span>
             )
         } else if (props.character.house === "Slytherin") {
             return (
@@ -89,14 +91,17 @@ const CharacterDetail = (props) => {
     const renderDetail = () => {
         return (
             <article className='detail'  >
-                <img className='detail__image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/200x275/091d33/cdd1d6/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
+                <img className='detail__image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/200x220/091d33/cdd1d6/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
                 <h3 className='detail__title' >{props.character.name}</h3>
                 {getAltNames()}
                 <p className='detail__text' >Estatus: {getStatus()}</p>
                 <p className='detail__text' >Especie: {getSpecies()}</p>
                 <p className='detail__text' >Genero: {getGender()}</p>
                 <p className='detail__text' >Ascendencia: {getBlood()}</p>
-                <p className='detail__text' >Casa: {getHouse()}</p>
+                <p className='detail__text' >
+                    {/* Casa:  */}
+                    {getHouse()}
+                </p>
 
             </article>
         )
@@ -104,7 +109,7 @@ const CharacterDetail = (props) => {
 
     return (
         <>
-            <Link to="/">Volver</Link>
+            <Link className='back' to="/">Volver</Link>
             {props.character === undefined ? renderNotFound() : renderDetail()}
         </>
     )

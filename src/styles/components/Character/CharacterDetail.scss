@@ -1,22 +1,28 @@
 @import "../../core/variables";
 
+body {
+  background-color: $colorBlack;
+}
+
 .detail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: cadetblue;
+  background-color: $colorPrimary;
   padding: 16px;
   margin: 32px;
 
   &__image {
     width: 200px;
-    height: 275px;
+    height: 220px;
     margin: 16px;
+    object-fit: cover;
+    object-position: top;
   }
   &__title {
     width: 200px;
     font-size: 32px;
-    color: black;
+    color: $colorWhite;
     line-height: 40px;
     text-align: center;
     font-family: $fontTitle;
@@ -25,12 +31,29 @@
   &__text {
     font-size: 16px;
     font-weight: 200;
-    color: black;
+    color: $colorWhite;
     line-height: 24px;
     font-family: $fontText;
+    margin: 8px;
     &--house {
       width: 64px;
       height: 64px;
     }
   }
+}
+
+.back {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  background-color: $colorSecondary;
+  border: 2px solid $colorPrimary;
+  border-radius: 8px;
+  color: $colorWhite;
+  font-family: $fontText;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 4px 8px;
+  margin: 32px;
+  width: 100px;
+  text-decoration: none;
 }
