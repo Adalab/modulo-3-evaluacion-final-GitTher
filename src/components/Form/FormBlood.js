@@ -13,14 +13,15 @@ const FormBlood = (props) => {
             <label
                 className='form__label' htmlFor="blood">
                 Ascendencia:
-            </label>
 
-            <select className='form__select' name="blood" id="blood" onChange={handleBlood} value={props.blood}>
-                <option value="">Cualquiera</option>
-                <option value="half-blood">Mestizo</option>
-                <option value="pure-blood">Sangre pura</option>
-                <option value="muggleborn">Hijo de muggles</option>
-            </select>
+
+                <select className='form__select' name="blood" id="blood" onChange={handleBlood} value={props.blood}>
+                    <option value="">Cualquiera</option>
+                    <option value="half-blood">Mestizo</option>
+                    <option value="pure-blood">Sangre pura</option>
+                    <option value="muggleborn">Hijo de muggles</option>
+                </select>
+            </label>
         </>
     )
 }
