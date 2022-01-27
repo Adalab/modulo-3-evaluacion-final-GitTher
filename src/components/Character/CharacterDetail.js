@@ -70,27 +70,27 @@ const CharacterDetail = (props) => {
     const getHouse = () => {
         if (props.character.house === "Gryffindor") {
             return (
-                <img className='detail__text--house' src={houseGryffindor} title="gryffindor" alt="gryffindor" />
+                <img className='detail__house--house' src={houseGryffindor} title="gryffindor" alt="gryffindor" />
 
             )
         } else if (props.character.house === "Slytherin") {
             return (
-                <img className='detail__text--house' src={houseSlytherin} title="slytherin" alt="slytherin" />
+                <img className='detail__house--house' src={houseSlytherin} title="slytherin" alt="slytherin" />
             )
         } else if (props.character.house === "Hufflepuff") {
             return (
-                <img className='detail__text--house' src={houseHufflepuff} title="hufflepuff" alt="hufflepuff" />
+                <img className='detail__house--house' src={houseHufflepuff} title="hufflepuff" alt="hufflepuff" />
             )
         } else if (props.character.house === "Ravenclaw") {
             return (
-                <img className='detail__text--house' src={houseRavenclaw} title="ravenclaw" alt="ravenclaw" />
+                <img className='detail__house--house' src={houseRavenclaw} title="ravenclaw" alt="ravenclaw" />
             )
         }
     }
     const getAltNames = () => {
         if (props.character.altnames.length > 0) {
             return (
-                <p className='detail__text'>Otros nombres: {props.character.altnames}</p>
+                <p className='detail__text'>Otros nombres: <span className='detail__text--content' >{props.character.altnames.join(', ')}</span></p>
             )
         }
     }
@@ -108,10 +108,11 @@ const CharacterDetail = (props) => {
                 <div>
                     <h3 className='detail__title' >{props.character.name}</h3>
                     {getAltNames()}
-                    <p className='detail__text' >Estatus: {getStatus()}</p>
-                    <p className='detail__text' >Especie: {getSpecies()}</p>
-                    <p className='detail__text' >Genero: {getGender()}</p>
-                    <p className='detail__text' >Ascendencia: {getBlood()}</p>
+                    <p className='detail__text' >Estatus: <span className='detail__text--content' >{getStatus()}</span></p>
+                    <p className='detail__text' >Especie: <span className='detail__text--content' >{getSpecies()}</span></p>
+                    <p className='detail__text' >Genero: <span className='detail__text--content' >{getGender()}</span></p>
+                    <p className='detail__text' >Ascendencia: <span className='detail__text--content' >{getBlood()}</span></p>
+                    <p className='detail__text' >Casa: <span className='detail__text--content' >{props.character.house}</span></p>
                     <div className='detail__house' >
                         {getHouse()}
                     </div>

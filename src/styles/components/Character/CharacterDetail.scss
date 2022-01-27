@@ -16,7 +16,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
-    width: 500px;
+    width: 550px;
     margin: auto;
   }
 
@@ -32,15 +32,24 @@ body {
     margin-bottom: 16px;
     @include tablet {
       text-align: left;
+      font-size: 40px;
+      line-height: 48px;
+      width: 250px;
     }
   }
   &__text {
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 700;
     color: $colorWhite;
     line-height: 24px;
     font-family: $fontText;
     margin: 8px;
+    &--content {
+      font-weight: 200;
+    }
+  }
+  &__house {
+    width: 56px;
     &--house {
       width: 56px;
     }
