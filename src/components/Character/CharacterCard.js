@@ -31,7 +31,7 @@ const CharacterCard = (props) => {
     return (
         <Link className='list__link' to={`/character/${props.character.house}/${props.character.id}`}>
             <article className='list__card'>
-                <img className='list__card--image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/200x275/ffffff/666666/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
+                <img className='list__card--image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/200x275/091d33/cdd1d6/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
                 <h3 className='list__card--title' >{props.character.name}</h3>
                 <p className='list__card--text' >{getSpecies()}</p>
                 <p className='list__card--text' >{getBlood()}</p>

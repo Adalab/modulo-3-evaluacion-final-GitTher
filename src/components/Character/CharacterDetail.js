@@ -89,7 +89,7 @@ const CharacterDetail = (props) => {
     const renderDetail = () => {
         return (
             <article className='detail'  >
-                <img className='detail__image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/210x295/ffffff/666666/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
+                <img className='detail__image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/200x275/091d33/cdd1d6/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
                 <h3 className='detail__title' >{props.character.name}</h3>
                 {getAltNames()}
                 <p className='detail__text' >Estatus: {getStatus()}</p>

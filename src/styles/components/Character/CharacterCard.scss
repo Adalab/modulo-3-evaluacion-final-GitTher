@@ -5,7 +5,7 @@
     text-decoration: none;
   }
   &__card {
-    background-color: cadetblue;
+    background-color: $colorPrimary;
     padding: 16px;
     margin: 8px;
     &--image {
@@ -15,7 +15,7 @@
     &--title {
       width: 200px;
       font-size: 32px;
-      color: black;
+      color: $colorWhite;
       line-height: 40px;
       text-align: center;
       font-family: $fontTitle;
@@ -23,7 +23,8 @@
     &--text {
       font-size: 16px;
       font-weight: 200;
-      color: black;
+      color: $colorWhite;
+      text-align: center;
       line-height: 24px;
       font-family: $fontText;
     }
