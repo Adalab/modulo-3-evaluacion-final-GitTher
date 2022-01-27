@@ -7,13 +7,13 @@
   align-items: center;
   justify-content: center;
   height: 150px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #091d33);
-  background-color: #123863;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), $colorBlack);
+  background-color: $colorPrimary;
   @include tablet {
     height: 225px;
   }
   @include desktop {
-    height: 275px;
+    height: 300px;
   }
 
   &__logo {
