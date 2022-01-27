@@ -11,13 +11,16 @@ body {
   align-items: center;
   background-color: $colorPrimary;
   padding: 16px;
-  margin: 32px;
+  border-radius: 8px;
+  box-shadow: 0 5px 8px rgba($color: $colorBlack, $alpha: 0.2);
+  text-align: center;
+  width: fit-content;
+  margin: auto;
   @include tablet {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
-    width: 550px;
-    margin: auto;
+    max-width: 800px;
   }
 
   &__image {
@@ -26,15 +29,18 @@ body {
     margin: 16px;
     object-fit: cover;
     object-position: top;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px rgba($color: $colorBlack, $alpha: 0.2);
   }
   &__title {
     @include characterTitle;
     margin-bottom: 16px;
+    text-shadow: 0 2px 3px rgba($color: $colorBlack, $alpha: 0.2);
     @include tablet {
       text-align: left;
       font-size: 40px;
       line-height: 48px;
-      width: 250px;
+      width: 300px;
     }
   }
   &__text {
@@ -44,12 +50,24 @@ body {
     line-height: 24px;
     font-family: $fontText;
     margin: 8px;
+    width: 200px;
+    @include tablet {
+      width: fit-content;
+    }
     &--content {
+      display: block;
       font-weight: 200;
+      @include tablet {
+        display: inline;
+      }
     }
   }
   &__house {
     width: 56px;
+    margin: auto;
+    @include tablet {
+      margin: 8px;
+    }
     &--house {
       width: 56px;
     }
@@ -57,12 +75,10 @@ body {
   &__back {
     @include button;
     text-decoration: none;
-    @include tablet {
-      display: block;
-      text-align: center;
-      margin: auto;
-      margin-bottom: 32px;
-    }
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 32px;
   }
 }
 

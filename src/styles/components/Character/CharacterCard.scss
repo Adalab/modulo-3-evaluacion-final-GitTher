@@ -9,13 +9,18 @@
     background-color: $colorPrimary;
     padding: 16px;
     margin: 8px;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px rgba($color: $colorBlack, $alpha: 0.2);
     &--image {
       width: 200px;
       height: 275px;
       object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 5px 8px rgba($color: $colorBlack, $alpha: 0.2);
     }
     &--title {
       @include characterTitle;
+      text-shadow: 0 2px 3px rgba($color: $colorBlack, $alpha: 0.2);
     }
     &--text {
       font-size: 16px;
