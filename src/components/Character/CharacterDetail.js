@@ -70,21 +70,20 @@ const CharacterDetail = (props) => {
     const getHouse = () => {
         if (props.character.house === "Gryffindor") {
             return (
-                // <span>Gryffindor
                 <img className='detail__text--house' src={houseGryffindor} title="gryffindor" alt="gryffindor" />
-                // </span>
+
             )
         } else if (props.character.house === "Slytherin") {
             return (
-                <span>Slytherin<img className='detail__text--house' src={houseSlytherin} title="slytherin" alt="slytherin" /></span>
+                <img className='detail__text--house' src={houseSlytherin} title="slytherin" alt="slytherin" />
             )
         } else if (props.character.house === "Hufflepuff") {
             return (
-                <span>Hufflepuff<img className='detail__text--house' src={houseHufflepuff} title="hufflepuff" alt="hufflepuff" /></span>
+                <img className='detail__text--house' src={houseHufflepuff} title="hufflepuff" alt="hufflepuff" />
             )
         } else if (props.character.house === "Ravenclaw") {
             return (
-                <span>Ravenclaw<img className='detail__text--house' src={houseRavenclaw} title="ravenclaw" alt="ravenclaw" /></span>
+                <img className='detail__text--house' src={houseRavenclaw} title="ravenclaw" alt="ravenclaw" />
             )
         }
     }
@@ -113,10 +112,9 @@ const CharacterDetail = (props) => {
                     <p className='detail__text' >Especie: {getSpecies()}</p>
                     <p className='detail__text' >Genero: {getGender()}</p>
                     <p className='detail__text' >Ascendencia: {getBlood()}</p>
-                    <p className='detail__text' >
-                        {/* Casa:  */}
+                    <div className='detail__house' >
                         {getHouse()}
-                    </p>
+                    </div>
                 </div>
 
             </article>
