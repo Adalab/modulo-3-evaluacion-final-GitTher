@@ -91,17 +91,19 @@ const CharacterDetail = (props) => {
     const renderDetail = () => {
         return (
             <article className='detail'  >
-                <img className='detail__image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/200x220/091d33/cdd1d6/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
-                <h3 className='detail__title' >{props.character.name}</h3>
-                {getAltNames()}
-                <p className='detail__text' >Estatus: {getStatus()}</p>
-                <p className='detail__text' >Especie: {getSpecies()}</p>
-                <p className='detail__text' >Genero: {getGender()}</p>
-                <p className='detail__text' >Ascendencia: {getBlood()}</p>
-                <p className='detail__text' >
-                    {/* Casa:  */}
-                    {getHouse()}
-                </p>
+                <img className='detail__image' src={props.character.image !== "" ? props.character.image : `https://via.placeholder.com/200x275/091d33/cdd1d6/?text=${props.character.name}`} title={props.character.name} alt={props.character.name} />
+                <div>
+                    <h3 className='detail__title' >{props.character.name}</h3>
+                    {getAltNames()}
+                    <p className='detail__text' >Estatus: {getStatus()}</p>
+                    <p className='detail__text' >Especie: {getSpecies()}</p>
+                    <p className='detail__text' >Genero: {getGender()}</p>
+                    <p className='detail__text' >Ascendencia: {getBlood()}</p>
+                    <p className='detail__text' >
+                        {/* Casa:  */}
+                        {getHouse()}
+                    </p>
+                </div>
 
             </article>
         )

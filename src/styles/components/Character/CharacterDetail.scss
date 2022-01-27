@@ -12,10 +12,17 @@ body {
   background-color: $colorPrimary;
   padding: 16px;
   margin: 32px;
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 500px;
+    margin: auto;
+  }
 
   &__image {
     width: 200px;
-    height: 220px;
+    height: 275px;
     margin: 16px;
     object-fit: cover;
     object-position: top;
@@ -23,6 +30,9 @@ body {
   &__title {
     @include characterTitle;
     margin-bottom: 16px;
+    @include tablet {
+      text-align: left;
+    }
   }
   &__text {
     font-size: 16px;
