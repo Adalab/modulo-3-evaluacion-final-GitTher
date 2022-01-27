@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import '../styles/App.scss';
-// import PropTypes from 'prop-types';
 
 import Header from './Header';
 import Form from "./Form/Form";

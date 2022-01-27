@@ -28,7 +28,7 @@
     font-size: 40px;
     color: $colorWhite;
     line-height: 48px;
-    text-shadow: 0 2px 3px rgba($color: #000000, $alpha: 0.2);
+    text-shadow: 0 2px 3px rgba($color: $colorBlack, $alpha: 0.2);
     text-align: center;
     @include tablet {
       font-size: 48px;
