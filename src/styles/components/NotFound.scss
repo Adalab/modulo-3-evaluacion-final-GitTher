@@ -8,12 +8,10 @@ body {
 .back {
   @include button;
   text-decoration: none;
-  @include tablet {
-    display: block;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 32px;
-  }
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 32px;
 }
 
 .alert {
