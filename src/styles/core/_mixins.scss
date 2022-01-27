@@ -28,6 +28,16 @@
   width: 100px;
 }
 
+@mixin alert {
+  font-size: 16px;
+  color: $colorWhite;
+  padding: 16px;
+  font-family: $fontText;
+  border: 2px solid $colorSecondary;
+  margin: 32px;
+  text-align: center;
+}
+
 /* --------- form --------- */
 
 @mixin formLabel {

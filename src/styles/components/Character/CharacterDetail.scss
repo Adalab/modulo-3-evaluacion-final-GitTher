@@ -42,3 +42,7 @@ body {
   @include button;
   text-decoration: none;
 }
+
+.alert {
+  @include alert;
+}

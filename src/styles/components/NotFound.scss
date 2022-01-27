@@ -1,0 +1,15 @@
+@import "../core/variables";
+@import "../core/mixins";
+
+body {
+  background-color: $colorBlack;
+}
+
+.back {
+  @include button;
+  text-decoration: none;
+}
+
+.alert {
+  @include alert;
+}

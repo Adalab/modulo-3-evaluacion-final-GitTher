@@ -1,8 +1,13 @@
 @import "../../core/variables";
+@import "../../core/mixins";
 
 .list {
   background-color: $colorBlack;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.alert {
+  @include alert;
 }

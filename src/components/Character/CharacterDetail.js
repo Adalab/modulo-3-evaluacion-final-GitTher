@@ -84,7 +84,7 @@ const CharacterDetail = (props) => {
 
     const renderNotFound = () => {
         return (
-            <p>El personaje que buscas no existe</p>
+            <p className='alert'>El personaje que buscas no existe</p>
         );
     };
 

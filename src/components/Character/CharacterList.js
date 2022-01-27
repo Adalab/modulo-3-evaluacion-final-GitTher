@@ -11,7 +11,7 @@ const CharacterList = (props) => {
         )
     })
 
-    const notFound = <p>No hay ningún personaje llamado {props.name}</p>
+    const notFound = <p className='alert' >No hay ningún personaje llamado {props.name}</p>
 
     return (
         <section>
