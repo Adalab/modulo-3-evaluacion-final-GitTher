@@ -69,6 +69,7 @@
   font-size: 16px;
   padding: 4px 8px;
   width: 200px;
+  transition: all ease 0.3s;
   &:hover {
     border-color: $colorWhite;
     box-shadow: 0 2px 4px 0 rgba($color: $colorWhite, $alpha: 0.5);

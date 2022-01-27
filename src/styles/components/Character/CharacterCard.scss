@@ -9,8 +9,19 @@
     background-color: $colorPrimary;
     padding: 16px;
     margin: 8px;
+    border: 1px solid $colorPrimary;
     border-radius: 8px;
     box-shadow: 0 5px 8px rgba($color: $colorBlack, $alpha: 0.2);
+    transition: all ease 0.3s;
+    &:hover {
+      border-color: $colorWhite;
+      box-shadow: 0 2px 4px 0 rgba($color: $colorWhite, $alpha: 0.5);
+      cursor: pointer;
+      transform: translateY(-3px);
+    }
+    &:focus {
+      border-color: $colorWhite;
+    }
     &--image {
       width: 200px;
       height: 275px;
