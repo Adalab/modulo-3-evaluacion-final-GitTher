@@ -1,4 +1,5 @@
 import '../../styles/components/Form/Form.scss'
+import FormAlive from './FormAlive';
 
 import FormBlood from "./FormBlood";
 import FormHouse from "./FormHouse"
@@ -31,6 +32,7 @@ const Form = (props) => {
                 <FormName name={props.name} handleFilter={props.handleFilter} />
                 <FormHouse house={props.house} handleFilter={props.handleFilter} />
                 <FormBlood blood={props.blood} handleFilter={props.handleFilter} />
+                <FormAlive alive={props.alive} handleFilter={props.handleFilter} />
             </form>
             <button className='form__reset' onClick={handleReset}>Reset</button>
         </section>

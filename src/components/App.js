@@ -18,7 +18,8 @@ function App() {
 
   const [house, setHouse] = useState(ls.get('house', 'Gryffindor'));
   const [name, setName] = useState(ls.get('name', ''));
-  const [blood, setBlood] = useState(ls.get('blood', ''))
+  const [blood, setBlood] = useState(ls.get('blood', ''));
+  const [alive, setAlive] = useState(true);
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -44,6 +45,12 @@ function App() {
       setName(form.value);
     } else if (form.key === 'blood') {
       setBlood(form.value);
+    } else if (form.key === 'alive') {
+      if (form.value === 'alive') {
+        setAlive(true);
+      } else if (form.value === 'dead') {
+        setAlive(false);
+      }
     }
   }
 
@@ -54,6 +61,9 @@ function App() {
     )
     .filter((character) => {
       return character.blood.includes(blood);
+    })
+    .filter((character) => {
+      return character.alive === alive;
     })
 
   const orderedCharacters = filteredCharacters.sort((a, b) => {
@@ -83,7 +93,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Form house={house} name={name} blood={blood} handleFilter={handleFilter} />
+          <Form house={house} name={name} blood={blood} alive={alive} handleFilter={handleFilter} />
           <CharacterList characters={orderedCharacters} name={name} />
         </Route>
         <Route path="/character/:characterId" ><CharacterDetail character={getRouteCharacter()} /></Route>
