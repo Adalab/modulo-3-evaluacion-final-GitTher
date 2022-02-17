@@ -24,7 +24,7 @@
 
 ## About The Project
 
-[View the project](http://beta.adalab.es/modulo-3-evaluacion-final-GitTher/)
+[View the project](http://gitther.github.io/modulo-3-evaluacion-final-GitTher/)
 
 This project features an Harry Potter character database thanks to the [HP API](https://hp-api.herokuapp.com/). This page also allows to filter characters by hogwarts house, species and ancestry.
 
@@ -48,7 +48,7 @@ To start this project you need to follow this steps:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Adalab/modulo-3-evaluacion-final-GitTher.git
+   git clone https://github.com/GitTher/modulo-3-evaluacion-final-GitTher.git
    ```
 2. Install NPM packages
    ```sh
@@ -75,4 +75,4 @@ To start this project you need to follow this steps:
 
 Esther Fernández - [GitTher](https://github.com/GitTher)
 
-Project Link: [https://github.com/Adalab/modulo-3-evaluacion-final-GitTher](https://github.com/Adalab/modulo-3-evaluacion-final-GitTher)
+Project Link: [https://github.com/GitTher/modulo-3-evaluacion-final-GitTher](https://github.com/GitTher/modulo-3-evaluacion-final-GitTher)
